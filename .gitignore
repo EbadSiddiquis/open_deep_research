@@ -67,3 +67,6 @@ tmp/
 temp/
 
 .langgraph_api
+
+# Claude-native research runs (may contain fetched web content; never commit)
+.research_runs/

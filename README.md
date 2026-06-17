@@ -1,149 +1,259 @@
-# 🔬 Open Deep Research
+# 🔬 Open Deep Research — Claude-native personal workspace
 
-<img width="1388" height="298" alt="full_diagram" src="https://github.com/user-attachments/assets/12a2371b-8be2-4219-9b48-90503eb43c69" />
+This is a personal fork of [Open Deep Research](https://github.com/langchain-ai/open_deep_research)
+turned into a **Claude-native deep-research workspace**. Instead of calling
+hosted model APIs from Python, **Claude Code itself** does all the reasoning —
+clarifying, planning, delegating subquestions to subagents, evaluating sources,
+finding contradictions, filling gaps, and writing the final report. A small
+local **MCP server** provides the deterministic plumbing: research-run storage,
+optional Tavily web search, URL extraction, source/claim storage, deduplication,
+and report saving.
 
-Deep research has broken out as one of the most popular agent applications. This is a simple, configurable, fully open source deep research agent that works across many model providers, search tools, and MCP servers. It's performance is on par with many popular deep research agents ([see Deep Research Bench leaderboard](https://huggingface.co/spaces/Ayanami0730/DeepResearch-Leaderboard)).
+- **No model-provider API key required.** Reasoning runs on the Claude account
+  you're signed into in Claude Code.
+- **Tavily is the only external API, and it's optional.** Without it, the server
+  still runs and Claude falls back to its client's native web search or to URLs
+  and documents you provide.
+- The original upstream LangGraph implementation is **preserved** and still
+  runnable if you deliberately install the legacy dependencies (see
+  [Original upstream mode](#original-upstream-mode-langgraph)).
 
-<img width="817" height="666" alt="Screenshot 2025-07-13 at 11 21 12 PM" src="https://github.com/user-attachments/assets/052f2ed3-c664-4a4f-8ec2-074349dcaa3f" />
+---
 
-### 🔥 Recent Updates
+## 🚀 Personal quickstart (Windows / Git Bash)
 
-**August 14, 2025**: See our free course [here](https://academy.langchain.com/courses/deep-research-with-langgraph) (and course repo [here](https://github.com/langchain-ai/deep_research_from_scratch)) on building open deep research.
+All commands below are written for **Windows Git Bash**. They also work on
+macOS/Linux shells unchanged.
 
-**August 7, 2025**: Added GPT-5 and updated the Deep Research Bench evaluation w/ GPT-5 results.
+### 1. Install dependencies
 
-**August 2, 2025**: Achieved #6 ranking on the [Deep Research Bench Leaderboard](https://huggingface.co/spaces/Ayanami0730/DeepResearch-Leaderboard) with an overall score of 0.4344. 
+Install [`uv`](https://docs.astral.sh/uv/) if you don't have it, then from the
+repo root:
 
-**July 30, 2025**: Read about the evolution from our original implementations to the current version in our [blog post](https://rlancemartin.github.io/2025/07/30/bitter_lesson/).
-
-**July 16, 2025**: Read more in our [blog](https://blog.langchain.com/open-deep-research/) and watch our [video](https://www.youtube.com/watch?v=agGiWUpxkhg) for a quick overview.
-
-### 🚀 Quickstart
-
-1. Clone the repository and activate a virtual environment:
 ```bash
-git clone https://github.com/langchain-ai/open_deep_research.git
-cd open_deep_research
-uv venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
-
-2. Install dependencies:
-```bash
-uv sync
-# or
-uv pip install -r pyproject.toml
-```
-
-3. Set up your `.env` file to customize the environment variables (for model selection, search tools, and other configuration settings):
-```bash
+uv sync --extra claude-native
 cp .env.example .env
 ```
 
-4. Launch agent with the LangGraph server locally:
+This installs only the lightweight Claude-native runtime (`mcp`,
+`tavily-python`, `httpx`, `beautifulsoup4`, `markdownify`). It deliberately
+installs **no** model-provider SDKs.
+
+#### Development / test tools (optional)
+
+The test and lint toolchain (`pytest`, `pytest-asyncio`, `ruff`, `mypy`) lives
+in a separate `dev` dependency-group that is **not** installed by default, so
+the runtime install above stays minimal. To install the Claude-native runtime
+**plus** the dev tools, add `--group dev`:
 
 ```bash
-# Install dependencies and start the LangGraph server
+uv sync --extra claude-native --group dev
+```
+
+Verify the MCP tools (no network — everything is mocked). These commands are
+written for **Windows Git Bash** and work unchanged on macOS/Linux:
+
+```bash
+uv run --group dev pytest tests/claude_research_mcp/
+uv run --group dev ruff check src/claude_research_mcp tests/claude_research_mcp
+```
+
+You should see `46 passed` and `All checks passed!`. The `dev` group contains
+**no** model-provider SDKs.
+
+### 2. Authenticate Claude Code with your Claude Max account
+
+Make sure you are signed into Claude Code with your Claude subscription:
+
+```bash
+claude          # opens Claude Code; sign in with your Claude (Max) account if prompted
+```
+
+> ⚠️ Do **not** set `ANTHROPIC_API_KEY` (or any other model-provider key) if you
+> want Claude Code to use your subscription. See
+> [Billing safety](#-billing-safety).
+
+### 3. (Optional) Add a Tavily key for live web search
+
+Edit `.env` and set your key (get one at https://www.tavily.com):
+
+```bash
+# .env
+TAVILY_API_KEY=your-tavily-key
+```
+
+Leave it blank to run without live search — everything else still works.
+
+### 4. Register the local MCP server with Claude Code
+
+This repo ships a project-scoped `.mcp.json`, so when you open the project in
+Claude Code it will offer to enable the `research-tools` server automatically.
+To register it explicitly (e.g. for your user scope), run:
+
+```bash
+claude mcp add --transport stdio research-tools -- uv run python -m claude_research_mcp.server
+```
+
+Verify it's connected:
+
+```bash
+claude mcp list
+```
+
+You should see `research-tools` listed. (Tip: you can sanity-check the server
+starts on its own with `uv run python -m claude_research_mcp.server` — it will
+wait on stdio; press `Ctrl+C` to exit.)
+
+### 5. Run the deep-research workflow
+
+In Claude Code, run the project command:
+
+```
+/deep-research Compare the best practice-management systems for a small telehealth clinic
+```
+
+You can prefix the request with a depth preset:
+
+```
+/deep-research deep  Compare on-call scheduling tools for a 20-person SRE team
+/deep-research quick What's the current EU AI Act timeline?
+```
+
+Claude will clarify only if essential, create a research brief, break it into
+independent subquestions, delegate to subagents where helpful, search via Tavily
+(or native web search / your URLs), normalize and compare sources, flag
+conflicts and gaps, optionally do one more search pass, then write and save a
+cited Markdown report.
+
+### 6. Find your saved reports
+
+Each run is stored under a gitignored folder:
+
+```
+.research_runs/<run-id>/
+├── request.md      # the original request + depth
+├── plan.json       # research brief + subquestions
+├── sources.json    # structured SourceRecord list
+├── claims.json     # structured ClaimRecord list
+├── conflicts.json  # claims with contradicting sources
+├── notes.md        # working notes
+├── report.md       # the final cited report
+└── run.json        # run metadata
+```
+
+Open the report:
+
+```bash
+ls .research_runs/
+cat .research_runs/<run-id>/report.md
+```
+
+### 7. Troubleshooting
+
+| Symptom | Fix |
+|---|---|
+| `research-tools` not listed in `claude mcp list` | Re-run the `claude mcp add` command from step 4 from the repo root. Make sure `uv` is on your `PATH`. |
+| Search returns "Tavily is not configured" | Add `TAVILY_API_KEY` to `.env`, or proceed with native web search / provided URLs. |
+| `ModuleNotFoundError: claude_research_mcp` | Run `uv sync --extra claude-native`; launch the server from the repo root so the package resolves. |
+| Server won't start | Run `uv run python -m claude_research_mcp.server` directly to see the error; check Python ≥ 3.10. |
+| Want to confirm tools work | `uv sync --extra claude-native --group dev` then `uv run --group dev pytest tests/claude_research_mcp/ -q` (no network, all mocked). |
+| Reports not appearing | Check `RESEARCH_RUNS_DIR` in `.env`; default is `.research_runs/`. |
+
+---
+
+## 💳 Billing safety
+
+- This workflow uses the **Claude account authenticated in Claude Code**. It does
+  **not** call the Anthropic API (or any model API) from Python.
+- Do **not** set `ANTHROPIC_API_KEY` when you want Claude Code to use your Claude
+  subscription — a set key can route usage to separately-billed API credits.
+- **Tavily** is a separate, optional service with its own (generous free) billing.
+- Usage remains subject to the limits of your Claude subscription.
+
+> 🔒 Privacy note: web search sends your query text to Tavily. Do not put patient,
+> financial, identifying, or otherwise confidential information into search
+> queries. The workflow will warn you before doing so.
+
+---
+
+## 🧭 How it works
+
+The useful orchestration ideas from Open Deep Research are kept — but implemented
+as **Claude instructions and Claude Code agent behavior**, not Python model calls:
+
+| Concept | Where it lives now |
+|---|---|
+| Research brief | Claude writes it; stored via `update_plan` |
+| Supervisor / researcher split | Claude (supervisor) delegates to Claude Code **subagents** (researchers) |
+| Independent subquestions, parallel work | Subagents launched concurrently, bounded by the depth preset |
+| Bounded iterations | quick / standard / deep presets (limits, not targets) |
+| Source compression | Subagents return compressed, cited findings |
+| Evidence verification | `record_claims` with supporting/contradicting source ids |
+| Gap detection | `research_status` surfaces conflicts and `unresolved` claims |
+| Final report | Claude writes it; saved via `save_report` |
+
+The workflow itself is defined in:
+
+- `.claude/commands/deep-research.md` — the `/deep-research` command
+- `.claude/skills/deep-research/SKILL.md` — the full methodology + presets +
+  source/safety rules
+
+The MCP server lives in `src/claude_research_mcp/` and exposes these tools:
+`start_research_run`, `tavily_search`, `extract_urls`, `add_sources`,
+`list_sources`, `deduplicate_sources`, `record_claims`, `update_plan`,
+`research_status`, `save_report`. **No model reasoning happens inside the
+tools** — they only store, search, extract, normalize, and format.
+
+### Presets (limits, not targets)
+
+| Preset | Subquestions | Queries/subq | Sources/subq | Gap pass | Max concurrent subagents |
+|---|---|---|---|---|---|
+| quick | 2 | 2 | 3 | none | 1 |
+| standard | 4 | 3 | 5 | 1 if justified | 2 |
+| deep | 6 | 4 | 7 | 1 | 3 |
+
+---
+
+## Original upstream mode (LangGraph)
+
+The original LangGraph implementation is preserved under
+`src/open_deep_research/` and still works **if you deliberately install the
+legacy dependencies and supply your own model-provider API keys**. It is not
+required for the Claude-native workflow above.
+
+```bash
+# Install the full legacy stack (OpenAI, Anthropic, Google, Tavily, LangGraph, ...)
+uv sync --extra legacy
+
+# Provide model + search credentials in .env (e.g. OPENAI_API_KEY, TAVILY_API_KEY, ...)
+# See the upstream project for the full list of supported providers.
+
+# Launch the LangGraph server + Studio UI
 uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 langgraph dev --allow-blocking
 ```
 
-This will open the LangGraph Studio UI in your browser.
+This opens LangGraph Studio. Configure models and search APIs in the
+`Configuration` (`src/open_deep_research/configuration.py`). This mode **does**
+call hosted model APIs and is billed accordingly.
 
-```
-- 🚀 API: http://127.0.0.1:2024
-- 🎨 Studio UI: https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
-- 📚 API Docs: http://127.0.0.1:2024/docs
-```
+### Evaluation (legacy)
 
-Ask a question in the `messages` input field and click `Submit`. Select different configuration in the "Manage Assistants" tab.
-
-### ⚙️ Configurations
-
-#### LLM :brain:
-
-Open Deep Research supports a wide range of LLM providers via the [init_chat_model() API](https://python.langchain.com/docs/how_to/chat_models_universal_init/). It uses LLMs for a few different tasks. See the below model fields in the [configuration.py](https://github.com/langchain-ai/open_deep_research/blob/main/src/open_deep_research/configuration.py) file for more details. This can be accessed via the LangGraph Studio UI. 
-
-- **Summarization** (default: `openai:gpt-4.1-mini`): Summarizes search API results
-- **Research** (default: `openai:gpt-4.1`): Power the search agent
-- **Compression** (default: `openai:gpt-4.1`): Compresses research findings
-- **Final Report Model** (default: `openai:gpt-4.1`): Write the final report
-
-> Note: the selected model will need to support [structured outputs](https://python.langchain.com/docs/integrations/chat/) and [tool calling](https://python.langchain.com/docs/how_to/tool_calling/).
-
-> Note: For OpenRouter: Follow [this guide](https://github.com/langchain-ai/open_deep_research/issues/75#issuecomment-2811472408) and for local models via Ollama  see [setup instructions](https://github.com/langchain-ai/open_deep_research/issues/65#issuecomment-2743586318).
-
-#### Search API :mag:
-
-Open Deep Research supports a wide range of search tools. By default it uses the [Tavily](https://www.tavily.com/) search API. Has full MCP compatibility and work native web search for Anthropic and OpenAI. See the `search_api` and `mcp_config` fields in the [configuration.py](https://github.com/langchain-ai/open_deep_research/blob/main/src/open_deep_research/configuration.py) file for more details. This can be accessed via the LangGraph Studio UI. 
-
-#### Other 
-
-See the fields in the [configuration.py](https://github.com/langchain-ai/open_deep_research/blob/main/src/open_deep_research/configuration.py) for various other settings to customize the behavior of Open Deep Research. 
-
-### 📊 Evaluation
-
-Open Deep Research is configured for evaluation with [Deep Research Bench](https://huggingface.co/spaces/Ayanami0730/DeepResearch-Leaderboard). This benchmark has 100 PhD-level research tasks (50 English, 50 Chinese), crafted by domain experts across 22 fields (e.g., Science & Tech, Business & Finance) to mirror real-world deep-research needs. It has 2 evaluation metrics, but the leaderboard is based on the RACE score. This uses LLM-as-a-judge (Gemini) to evaluate research reports against a golden set of reports compiled by experts across a set of metrics.
-
-#### Usage
-
-> Warning: Running across the 100 examples can cost ~$20-$100 depending on the model selection.
-
-The dataset is available on [LangSmith via this link](https://smith.langchain.com/public/c5e7a6ad-fdba-478c-88e6-3a388459ce8b/d). To kick off evaluation, run the following command:
-
-```bash
-# Run comprehensive evaluation on LangSmith datasets
-python tests/run_evaluate.py
-```
-
-This will provide a link to a LangSmith experiment, which will have a name `YOUR_EXPERIMENT_NAME`. Once this is done, extract the results to a JSONL file that can be submitted to the Deep Research Bench.
-
-```bash
-python tests/extract_langsmith_data.py --project-name "YOUR_EXPERIMENT_NAME" --model-name "you-model-name" --dataset-name "deep_research_bench"
-```
-
-This creates `tests/expt_results/deep_research_bench_model-name.jsonl` with the required format. Move the generated JSONL file to a local clone of the Deep Research Bench repository and follow their [Quick Start guide](https://github.com/Ayanami0730/deep_research_bench?tab=readme-ov-file#quick-start) for evaluation submission.
-
-#### Results 
-
-| Name | Commit | Summarization | Research | Compression | Total Cost | Total Tokens | RACE Score | Experiment |
-|------|--------|---------------|----------|-------------|------------|--------------|------------|------------|
-| GPT-5 | [ca3951d](https://github.com/langchain-ai/open_deep_research/pull/168/commits) | openai:gpt-4.1-mini | openai:gpt-5 | openai:gpt-4.1 |  | 204,640,896 | 0.4943 | [Link](https://smith.langchain.com/o/ebbaf2eb-769b-4505-aca2-d11de10372a4/datasets/6e4766ca-613c-4bda-8bde-f64f0422bbf3/compare?selectedSessions=4d5941c8-69ce-4f3d-8b3e-e3c99dfbd4cc&baseline=undefined) |
-| Defaults | [6532a41](https://github.com/langchain-ai/open_deep_research/commit/6532a4176a93cc9bb2102b3d825dcefa560c85d9) | openai:gpt-4.1-mini | openai:gpt-4.1 | openai:gpt-4.1 | $45.98 | 58,015,332 | 0.4309 | [Link](https://smith.langchain.com/o/ebbaf2eb-769b-4505-aca2-d11de10372a4/datasets/6e4766ca-6[…]ons=cf4355d7-6347-47e2-a774-484f290e79bc&baseline=undefined) |
-| Claude Sonnet 4 | [f877ea9](https://github.com/langchain-ai/open_deep_research/pull/163/commits/f877ea93641680879c420ea991e998b47aab9bcc) | openai:gpt-4.1-mini | anthropic:claude-sonnet-4-20250514 | openai:gpt-4.1 | $187.09 | 138,917,050 | 0.4401 | [Link](https://smith.langchain.com/o/ebbaf2eb-769b-4505-aca2-d11de10372a4/datasets/6e4766ca-6[…]ons=04f6002d-6080-4759-bcf5-9a52e57449ea&baseline=undefined) |
-| Deep Research Bench Submission | [c0a160b](https://github.com/langchain-ai/open_deep_research/commit/c0a160b57a9b5ecd4b8217c3811a14d8eff97f72) | openai:gpt-4.1-nano | openai:gpt-4.1 | openai:gpt-4.1 | $87.83 | 207,005,549 | 0.4344 | [Link](https://smith.langchain.com/o/ebbaf2eb-769b-4505-aca2-d11de10372a4/datasets/6e4766ca-6[…]ons=e6647f74-ad2f-4cb9-887e-acb38b5f73c0&baseline=undefined) |
-
-### 🚀 Deployments and Usage
-
-#### LangGraph Studio
-
-Follow the [quickstart](#-quickstart) to start LangGraph server locally and test the agent out on LangGraph Studio.
-
-#### Hosted deployment
- 
-You can easily deploy to [LangGraph Platform](https://langchain-ai.github.io/langgraph/concepts/#deployment-options). 
-
-#### Open Agent Platform
-
-Open Agent Platform (OAP) is a UI from which non-technical users can build and configure their own agents. OAP is great for allowing users to configure the Deep Researcher with different MCP tools and search APIs that are best suited to their needs and the problems that they want to solve.
-
-We've deployed Open Deep Research to our public demo instance of OAP. All you need to do is add your API Keys, and you can test out the Deep Researcher for yourself! Try it out [here](https://oap.langchain.com)
-
-You can also deploy your own instance of OAP, and make your own custom agents (like Deep Researcher) available on it to your users.
-1. [Deploy Open Agent Platform](https://docs.oap.langchain.com/quickstart)
-2. [Add Deep Researcher to OAP](https://docs.oap.langchain.com/setup/agents)
+The Deep Research Bench evaluation harness in `tests/run_evaluate.py` targets the
+legacy LangGraph graph and requires the `legacy` extra plus LangSmith/model
+credentials. See the upstream repository for details. It is unrelated to the
+Claude-native workflow.
 
 ### Legacy Implementations 🏛️
 
-The `src/legacy/` folder contains two earlier implementations that provide alternative approaches to automated research. They are less performant than the current implementation, but provide alternative ideas understanding the different approaches to deep research.
+`src/legacy/` contains two earlier upstream approaches, also requiring the
+`legacy` extra:
 
-#### 1. Workflow Implementation (`legacy/graph.py`)
-- **Plan-and-Execute**: Structured workflow with human-in-the-loop planning
-- **Sequential Processing**: Creates sections one by one with reflection
-- **Interactive Control**: Allows feedback and approval of report plans
-- **Quality Focused**: Emphasizes accuracy through iterative refinement
+- **`legacy/graph.py`** — plan-and-execute workflow with human-in-the-loop.
+- **`legacy/multi_agent.py`** — supervisor-researcher multi-agent architecture.
 
-#### 2. Multi-Agent Implementation (`legacy/multi_agent.py`)  
-- **Supervisor-Researcher Architecture**: Coordinated multi-agent system
-- **Parallel Processing**: Multiple researchers work simultaneously
-- **Speed Optimized**: Faster report generation through concurrency
-- **MCP Support**: Extensive Model Context Protocol integration
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE). Original work © Lance Martin and the Open Deep
+Research contributors; this fork preserves that copyright and license.
