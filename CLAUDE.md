@@ -1,5 +1,22 @@
 # Open Deep Research Repository Overview
 
+## Claude-native deep research workspace (primary mode in this fork)
+
+This fork's primary mode is **Claude-native**: Claude Code does all reasoning
+(clarify, plan, delegate, evaluate, verify, write). A local stdio MCP server in
+`src/claude_research_mcp/` provides deterministic tools only (run storage, Tavily
+search, URL extraction, source/claim storage, dedup, report saving) — **no model
+reasoning lives in the tools, and no model-provider API key is required**.
+
+- Run it with the `/deep-research` command (`.claude/commands/deep-research.md`),
+  which follows the methodology + presets in `.claude/skills/deep-research/SKILL.md`.
+- Tavily is the only external API and is **optional** (`TAVILY_API_KEY`); without
+  it, fall back to native web search or user-provided URLs — never another API.
+- Reports are saved under `.research_runs/<run-id>/` (gitignored).
+- Setup: `uv sync --extra claude-native`. See README "Personal quickstart".
+- The original upstream LangGraph implementation below is preserved under the
+  optional `legacy` extra and is unrelated to this workflow.
+
 ## Project Description
 Open Deep Research is a configurable, fully open-source deep research agent that works across multiple model providers, search tools, and MCP (Model Context Protocol) servers. It enables automated research with parallel processing and comprehensive report generation.
 

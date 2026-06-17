@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "research-tools": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "-m", "claude_research_mcp.server"]
+    }
+  }
+}
