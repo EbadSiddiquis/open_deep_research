@@ -8,8 +8,25 @@ description: Run a cited, multi-source deep-research workflow using the local re
 You are the **research supervisor**. You perform all reasoning, planning,
 evaluation, contradiction-finding, gap detection, and writing yourself. The
 local `research-tools` MCP server only does deterministic work: run storage,
-Tavily search, URL extraction, source/claim storage, deduplication, and saving
-the report. Never expect the tools to "think" — they store and fetch.
+web search (Tavily keyword + optional Exa semantic), URL extraction (Tavily,
+Jina, Firecrawl), source/claim storage, deduplication, and saving the report.
+Never expect the tools to "think" — they store and fetch.
+
+**Search & extraction backends (retrieval only — you still do all reasoning):**
+all backends are wrapped behind the one local MCP server with a single
+normalized source shape. They are *optional* and key-gated; the server returns
+an actionable error when a key is missing, so prefer the ones that are
+configured and fall back gracefully.
+- `tavily_search` — keyword/factual queries with domain filtering (`TAVILY_API_KEY`).
+- `exa_search` — semantic/neural search for conceptual or multi-hop subquestions (`EXA_API_KEY`).
+- `extract_urls` — Tavily extract, or local httpx fallback (works without keys).
+- `jina_extract` — deep-read to clean markdown, renders JS; works keyless (`JINA_API_KEY` raises limits).
+- `firecrawl_extract` — deep-read protected/JS/anti-bot pages (`FIRECRAWL_API_KEY`).
+
+Strategy: `tavily_search` for keyword/factual, `exa_search` for
+conceptual/multi-hop, then deep-read the best hits with `firecrawl_extract`
+(protected/heavy pages) or `jina_extract` (everything else, cheap). Native web
+search remains a free fallback.
 
 ## Source & safety rules (always apply)
 
@@ -62,8 +79,10 @@ subquestions (within the preset limit) that can be researched in parallel.
 For non-trivial runs, dispatch one subagent per independent subquestion (respect
 the preset's max concurrency; launch concurrent subagents in a single message).
 Give each subagent: the subquestion, the source/safety rules above, the `run_id`,
-its query/source budget, and instructions to:
-- search (see step 5), extract, and read sources;
+its query/source budget, the available search/extraction backends (see the
+backend list above and step 5), and instructions to:
+- search and deep-read sources (Tavily/Exa for search; `extract_urls`,
+  `jina_extract`, or `firecrawl_extract` for reading — see step 5);
 - call `add_sources(run_id, [...])` with structured `SourceRecord`s;
 - return a compressed findings summary with inline citations and any conflicts.
 
@@ -71,10 +90,17 @@ For a quick run you may research inline without subagents.
 
 ### 5. Search and collect sources
 For each subquestion, search within budget:
-- `tavily_search(run_id, query, max_results, include_domains?, exclude_domains?, search_depth?)`.
-- If Tavily is **not configured** it returns an actionable error — fall back to
-  your client's **native web search** if available, or to user-provided URLs and
-  `extract_urls([...])`. **Never** silently switch to another search API.
+- `tavily_search(run_id, query, max_results, include_domains?, exclude_domains?, search_depth?)`
+  for keyword/factual queries; `exa_search(run_id, query, max_results, include_domains?, exclude_domains?)`
+  for conceptual/multi-hop queries.
+- Deep-read the best hits with `extract_urls([...])` (Tavily/httpx),
+  `jina_extract([...])` (clean markdown, renders JS, keyless), or
+  `firecrawl_extract([...])` (protected/anti-bot/heavy pages).
+- These backends are first-party tools of this same MCP server — use whichever
+  are configured. If a backend is **not configured** it returns an actionable
+  error; fall back to another configured first-party backend, your client's
+  **native web search**, or user-provided URLs. **Never** silently switch to an
+  outside search API that is not one of these tools.
 Normalize each kept result into a `SourceRecord` and store it with
 `add_sources`. Then call `deduplicate_sources(run_id)`.
 

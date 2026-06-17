@@ -67,7 +67,8 @@ disagree" when conflicts matter.
 ## Note on this Project vs Claude Code
 
 This Project uses claude.ai's built-in web search and delivers the report in chat.
-The full tool-backed version — local `research-tools` MCP server, Tavily search,
-and saved `report.md` + `sources.json` + `claims.json` under
+The full tool-backed version — local `research-tools` MCP server with hybrid
+retrieval backends (Tavily keyword + optional Exa semantic search; Tavily / Jina /
+Firecrawl extraction), and saved `report.md` + `sources.json` + `claims.json` under
 `.research_runs/<run-id>/` — runs via `/deep-research` in Claude Code in the
 `open_deep_research` repo. Same methodology, different tooling.
