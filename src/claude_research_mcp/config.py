@@ -1,8 +1,11 @@
 """Environment configuration for the Claude-native research MCP server.
 
-Tavily is the only supported external API and it is entirely optional. The
-server starts and all non-search tools work whether or not a Tavily key is set.
-No model-provider API key is read or required.
+Tavily is the default search/extract API and is entirely optional. Three further
+optional retrieval backends can be enabled with their own keys: Exa (semantic
+search), Firecrawl (deep extraction), and Jina Reader (clean-markdown extraction,
+which also works keyless). The server starts and all non-search tools work
+whether or not any of these are set. No model-provider API key is read or
+required -- these are retrieval backends only; Claude remains the reasoner.
 """
 
 import os
@@ -32,11 +35,29 @@ class Settings:
     tavily_max_results: int
     tavily_search_depth: str
     runs_dir: str
+    exa_api_key: str | None = None
+    firecrawl_api_key: str | None = None
+    jina_api_key: str | None = None
 
     @property
     def tavily_configured(self) -> bool:
         """Whether a non-empty Tavily API key is available."""
         return bool(self.tavily_api_key and self.tavily_api_key.strip())
+
+    @property
+    def exa_configured(self) -> bool:
+        """Whether a non-empty Exa API key is available."""
+        return bool(self.exa_api_key and self.exa_api_key.strip())
+
+    @property
+    def firecrawl_configured(self) -> bool:
+        """Whether a non-empty Firecrawl API key is available."""
+        return bool(self.firecrawl_api_key and self.firecrawl_api_key.strip())
+
+    @property
+    def jina_configured(self) -> bool:
+        """Whether a Jina API key is available (Jina Reader also works keyless)."""
+        return bool(self.jina_api_key and self.jina_api_key.strip())
 
 
 def _int_env(name: str, default: int) -> int:
@@ -53,8 +74,9 @@ def _int_env(name: str, default: int) -> int:
 def load_settings() -> Settings:
     """Build Settings from the current environment.
 
-    Reads only TAVILY_* and RESEARCH_RUNS_DIR. The Tavily key is held in memory
-    and must never be echoed back to the client or written into a run folder.
+    Reads TAVILY_*, EXA_API_KEY, FIRECRAWL_API_KEY, JINA_API_KEY, and
+    RESEARCH_RUNS_DIR. All API keys are held in memory and must never be echoed
+    back to the client or written into a run folder.
     """
     return Settings(
         tavily_api_key=os.environ.get("TAVILY_API_KEY") or None,
@@ -63,4 +85,7 @@ def load_settings() -> Settings:
             os.environ.get("TAVILY_SEARCH_DEPTH") or DEFAULT_SEARCH_DEPTH
         ).strip(),
         runs_dir=(os.environ.get("RESEARCH_RUNS_DIR") or DEFAULT_RUNS_DIR).strip(),
+        exa_api_key=os.environ.get("EXA_API_KEY") or None,
+        firecrawl_api_key=os.environ.get("FIRECRAWL_API_KEY") or None,
+        jina_api_key=os.environ.get("JINA_API_KEY") or None,
     )

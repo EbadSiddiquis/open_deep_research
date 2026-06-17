@@ -14,6 +14,12 @@ reasoning lives in the tools, and no model-provider API key is required**.
   it, fall back to native web search or user-provided URLs — never another API.
 - Reports are saved under `.research_runs/<run-id>/` (gitignored).
 - Setup: `uv sync --extra claude-native`. See README "Personal quickstart".
+- **Source of truth / cheat sheet:** `DEEP_RESEARCH_GUIDE.md` (repo root) is the
+  canonical reference — prompting tips, depth presets, Tavily setup, the full
+  9-step workflow, and the `research-tools` tool list. Mirrors live in
+  `docs/claude-ai-project/` (Claude.ai Project setup) and the Obsidian wiki
+  (`wiki/references/Deep Research Skill.md`). When changing behavior, edit
+  `.claude/skills/deep-research/SKILL.md` first, then sync `DEEP_RESEARCH_GUIDE.md`.
 - The original upstream LangGraph implementation below is preserved under the
   optional `legacy` extra and is unrelated to this workflow.
 
