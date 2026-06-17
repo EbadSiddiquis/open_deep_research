@@ -197,8 +197,9 @@ For a quick run you may research inline without subagents.
 
 ### 5. Search and collect sources
 For each subquestion, search within budget:
-- `tavily_search(run_id, query, max_results, include_domains?, exclude_domains?, search_depth?)`.
-- If Tavily is **not configured** it returns an actionable error — fall back to your client's **native web search** if available, or to user-provided URLs and `extract_urls([...])`. **Never** silently switch to another search API.
+- `tavily_search(run_id, query, max_results, include_domains?, exclude_domains?, search_depth?)` for keyword/factual queries; `exa_search(run_id, query, max_results, include_domains?, exclude_domains?)` for conceptual/multi-hop queries.
+- Deep-read the best hits with `extract_urls([...])` (Tavily/httpx), `jina_extract([...])` (clean markdown, renders JS, keyless), or `firecrawl_extract([...])` (protected/anti-bot/heavy pages).
+- These backends are first-party tools of this same MCP server — use whichever are configured. If a backend is **not configured** it returns an actionable error; fall back to another configured first-party backend, your client's **native web search**, or user-provided URLs. **Never** silently switch to an outside search API that is not one of these tools.
 
 Normalize each kept result into a `SourceRecord` and store it with `add_sources`. Then call `deduplicate_sources(run_id)`.
 
