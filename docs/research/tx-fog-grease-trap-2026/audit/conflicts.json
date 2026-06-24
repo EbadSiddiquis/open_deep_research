@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c8",
+    "claim": "Hauling grease-trap and grit-trap waste in Texas is governed by Title 30 TAC Chapter 312 (Sludge Use, Disposal, and Transportation); transporter registration is 30 TAC §312.142 and the trip-ticket/manifest + recordkeeping rule is 30 TAC §312.145.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq3-s1",
+      "sq3-s2",
+      "sq3-s3"
+    ],
+    "contradicting_source_ids": [
+      "sq3-s4"
+    ],
+    "confidence": "high",
+    "notes": "Section numbers verified. TCEQ 2014 guidance RG-086 labels them 'Subchapter G' while Cornell LII files them under 'Subchapter F'; cite by section number, which is not in dispute."
+  }
+]
