@@ -115,10 +115,15 @@ Companion workflow/retention state (required by § 312.145(b), schema is your de
 
 ## What we could not fully resolve
 
-1. **Exact `$10` per-vehicle sticker fee** for TCEQ registration — came via a page summarizer, not verbatim rule text. The *existence* of a dated per-vehicle sticker is corroborated by TCEQ RG-389; treat the **dollar figure as guidance-level** until checked against the current TCEQ fee schedule / § 312.142 verbatim. *(claim c13, low confidence.)*
-2. **Live SOS-hosted TAC text** (texreg.sos.state.tx.us) only returned a JS redirect and could not be read directly; verbatim § 312.142/§ 312.145 quotes come from **Cornell LII** (faithful TAC reproduction) + TCEQ publications. Three independent sources agree on substance, but we lack the SOS page itself as a second *primary* image of the quotes.
-3. **Dallas measurement basis wording:** the official **code-citing FAQ** says "25% … contains floating materials, sediment, oils, or grease" (FOG+solids), while a separate Dallas **brochure** loosely says "25% of design capacity." We treat the **code-FAQ phrasing as authoritative**; the codified § 19-126.2(c) full text was not extracted verbatim (amlegal page errored), so the exact statutory wording is corroborated-but-not-quoted.
-4. **Houston proposed changes:** a 2023 Health Dept. page referenced *proposed* Chapter 47 amendments. Those are proposals; the enforced § 47-512 text (Ord. 2020-1024) stands. Re-verify before a future release if Houston adopts new O/G frequencies.
+> **Update (independent verification run `20260624-205425-tx-fog-grease-trap-verify-57bf0a`):** items 1 and the §312 subchapter-letter conflict below are now **RESOLVED**. See `verification/comparison-report.md`. The independent pass found zero contradictions with this report and upgraded both weak items.
+
+1. ~~**Exact `$10` per-vehicle sticker fee**~~ → **RESOLVED / now a fact.** The independent pass found the verbatim rule: **§ 312.142(j)** — *"The commission issues authorization stickers for all registered motor transport vehicles and the fee per motor transport vehicle is $10."* Claim c13 upgraded `unresolved`→`fact`, `low`→`high`.
+2. **30 TAC §312 subchapter letter** → **RESOLVED toward Subchapter F** ("Liquid Waste Transporters", §§312.141–312.150), per the independent pass agreeing with Cornell LII; the "Subchapter G" label traces to the dated TCEQ RG-086. Section numbers were never in dispute.
+3. **Live SOS-hosted TAC text** (texreg.sos.state.tx.us) only returned a JS redirect and could not be read directly; verbatim § 312.142/§ 312.145 quotes come from **Cornell LII** (faithful TAC reproduction) + TCEQ publications. Both research passes agree on substance, but neither obtained the SOS page itself as a second *primary* image of the quotes. *(Still open.)*
+4. **Dallas / Austin verbatim *code* subsections** (§ 19-126.2(c), § 15-10-197): in **both** passes the numbers come from official guidance citing the section, not the raw code text (Municode JS-blocked). Values are consistent and high-confidence, but a future pull of the raw subsections would add strength. *(Still open — minor.)*
+5. **Houston proposed changes:** a 2023 Health Dept. page referenced *proposed* Chapter 47 amendments. Those are proposals; the enforced § 47-512 text (Ord. 2020-1024) stands. Re-verify before a future release if Houston adopts new O/G frequencies. *(Still open — monitor.)*
+
+**Additive findings from the verification pass** (no conflict; worth folding into the data model): § 312.142(c) requires the registration be *"produced and shown to the operator of the facility receiving the waste at the time of delivery"*; **yellow grease** (rendered fryer grease) is **exempt** from 30 TAC 312 (regulated under 25 TAC 221 by DSHS) — exclude yellow-grease loads from the manifest flow; § 312.145(d) requires the receiving facility to notify the TCEQ regional office within **3 days** if a transporter can't produce its registration.
 
 ---
 
