@@ -37,9 +37,10 @@ psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f 0001_custody_schema.down.sql
 - **Sample rows are sentinel-prefixed (`SAMPLE-`)** so the `0002` down-migration can delete
   them without risk to real records. If your migration runner expects each down to undo only
   its own DDL, move those three `DELETE`s into a separate fixtures script.
-- **Unverified in this run:** the exact `$10` per-vehicle sticker fee (guidance-level only);
-  Dallas/SAWS FOG discharge limits (left NULL — do not infer). See `../../report.md`
-  "What we could not fully resolve."
+- **Verification status:** the `$10` per-vehicle sticker fee is now **confirmed** from verbatim
+  rule text (30 TAC §312.142(j)) by the independent verification run — see
+  `../verification/comparison-report.md`. Still left NULL by design: Dallas/SAWS FOG discharge
+  limits (do not infer). See `../report.md` "What we could not fully resolve."
 - **Lawyer check worth doing:** electronic signatures are explicitly allowed for the generator
   (§312.145(a)(2)) and facility (§312.145(a)(7)) legs; the transporter leg is encoded as
   wet-signature-only as the conservative reading.

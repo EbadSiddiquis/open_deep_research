@@ -96,7 +96,7 @@
       "sq3-s4"
     ],
     "confidence": "high",
-    "notes": "Section numbers verified. TCEQ 2014 guidance RG-086 labels them 'Subchapter G' while Cornell LII files them under 'Subchapter F'; cite by section number, which is not in dispute."
+    "notes": "Section numbers verified. Subchapter-letter discrepancy RESOLVED toward Subchapter F ('Liquid Waste Transporters', §§312.141-312.150) by independent verification run 20260624-205425-tx-fog-grease-trap-verify-57bf0a, agreeing with Cornell LII against the dated TCEQ RG-086 'Subchapter G' label. Section numbers were never in dispute; cite by section number. See verification/comparison-report.md."
   },
   {
     "id": "c9",
@@ -149,13 +149,13 @@
   },
   {
     "id": "c13",
-    "claim": "The exact $10 per-vehicle authorization-sticker fee cited for TCEQ transporter registration could not be independently verified against current verbatim 30 TAC §312.142 text; it came via a summarizer. The existence of a dated per-vehicle sticker requirement is corroborated by TCEQ RG-389.",
-    "classification": "unresolved",
+    "claim": "TCEQ issues a per-vehicle authorization sticker for each registered motor transport vehicle; the fee is $10 per vehicle (30 TAC §312.142(j)).",
+    "classification": "fact",
     "supporting_source_ids": [
       "sq3-s3"
     ],
     "contradicting_source_ids": [],
-    "confidence": "low",
-    "notes": "Treat the exact fee figure as guidance-level until confirmed against current rule/fee schedule."
+    "confidence": "high",
+    "notes": "UPGRADED from unresolved/low by independent verification run 20260624-205425-tx-fog-grease-trap-verify-57bf0a, which found the verbatim rule: §312.142(j) 'The commission issues authorization stickers for all registered motor transport vehicles and the fee per motor transport vehicle is $10.' Verbatim source is verify-run source v3-s1 (30 TAC §312.142); see verification/audit/sources.json and verification/comparison-report.md."
   }
 ]
