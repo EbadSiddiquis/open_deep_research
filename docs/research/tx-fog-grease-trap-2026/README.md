@@ -24,9 +24,17 @@ Tracked copy of deep-research run `20260624-201024-tx-fog-grease-trap-tceq-regs-
 3. Resolve those ids in `audit/sources.json` to the actual URL + excerpt.
 4. Check `confidence` — anything `low`/`unresolved` is a soft value (here: the $10 sticker fee, claim c13).
 
-## Related (NOT in this bundle)
+## Deliverables (`migrations/`)
 
-The runnable deliverables derived from this research — the `trucks` / `custody_events` /
-`jurisdiction_fog_rules` SQL migrations and 4-city seed — remain under the gitignored run
-folder at `.research_runs/20260624-201024-tx-fog-grease-trap-tceq-regs-bda74e/deliverables/migrations/`.
-Copy them into the product repo's `migrations/` directory when wiring up.
+The runnable schema derived from this research — PostgreSQL migrations for the
+`trucks` / `trip_tickets` / `custody_events` custody schema (30 TAC §312.142/§312.145)
+and the `jurisdiction_fog_rules` config table seeded with the 4 cities. See
+`migrations/README.md` for apply/rollback commands and caveats.
+
+| Path | Role |
+|------|------|
+| `migrations/0001_custody_schema.up.sql` / `.down.sql` | TCEQ custody/manifest schema + enums |
+| `migrations/0002_jurisdiction_fog_rules_and_seed.up.sql` / `.down.sql` | per-city FOG rules table + 4-city seed + sample trip ticket |
+
+Copy these into the product repo's `migrations/` directory and renumber to fit its
+sequence when wiring up.
