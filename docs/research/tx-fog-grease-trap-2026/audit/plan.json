@@ -1,0 +1,20 @@
+{
+  "brief": "Goal: Produce true, citable regulatory values (not approximations) to hardcode jurisdiction config and design a TCEQ-compliant custody/manifest data model for a Texas waste-hauling software product, as of 2026. Decision informed: (a) per-jurisdiction config rules for grease-interceptor pump-out triggers and cleaning intervals; (b) a `trucks.registration_ref` regulatory identifier and a `custody_events` manifest/trip-ticket schema. Prefer PRIMARY sources: municipal Code of Ordinances (Municode/American Legal), SAWS rate/rule documents, Texas Administrative Code / TCEQ rules. Avoid law-firm summaries, SEO blogs, vendor marketing except as leads. Must surface where sources disagree or a number can't be verified. Out of scope: 40 CFR 403 except where a TX city incorporates it; non-TX jurisdictions; septic/land-application permitting beyond defining the transporter manifest.",
+  "subquestions": [
+    {
+      "id": "sq1",
+      "question": "HOUSTON: In the CURRENT Houston Code of Ordinances, which chapter/article/section governs grease traps/interceptors & FOG pretreatment for food-service establishments? Verify/correct the 'Chapter 47' assumption (map to FOG specifically, exact article/section). Quote the enforced pump-out trigger (e.g. 25% rule / FOG-depth rule) and any mandated minimum cleaning/pumping interval (e.g. 90 days), with section numbers and ordinance language.",
+      "status": "pending"
+    },
+    {
+      "id": "sq2",
+      "question": "PER-MUNICIPALITY: For Houston, Dallas, San Antonio (SAWS), and Austin, find each jurisdiction's OWN grease-interceptor maintenance rule — pump-out trigger (percent-full / FOG+solids depth) and mandated maximum cleaning interval (days/months) — with governing ordinance/SAWS-rule citation for each. State whether '90-day / 25%' is universal or varies; flag each city's actual formulation (25%/90-day vs quarterly vs different depth rule) for true per-jurisdiction config.",
+      "status": "pending"
+    },
+    {
+      "id": "sq3",
+      "question": "TCEQ TRANSPORTER: Under the Texas Administrative Code (identify exact title/chapter for grease/grit trap waste — e.g. 30 TAC ch. 312 or grease-trap-waste provisions), what is required to legally haul grease-trap & grit-trap waste in TX? (a) transporter registration requirement & what the registration number is / how issued; (b) manifest/'trip ticket' requirement — required fields, who signs, chain-of-custody & recordkeeping obligations. Map to data model: what belongs in `trucks.registration_ref`, and what events/signatures `custody_events` must capture.",
+      "status": "pending"
+    }
+  ]
+}

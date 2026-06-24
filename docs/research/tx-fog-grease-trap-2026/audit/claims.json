@@ -1,0 +1,161 @@
+[
+  {
+    "id": "c1",
+    "claim": "Houston FOG pretreatment for food-service establishments is governed by Houston Code of Ordinances Chapter 47 (Water and Sewers), Article XI, Division 9; cleaning/maintenance rules are in Sec. 47-512. The 'Chapter 47' assumption is correct but the live section is 47-512.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq1-s1",
+      "sq1-s2"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Article XI title is 'Transportation and Treatment of Certain Wastes', not a 'grease trap' article."
+  },
+  {
+    "id": "c2",
+    "claim": "Houston requires full evacuation of each grease interceptor/holding tank at least once every 90 days (Sec. 47-512(b)), with a hard floor of at least once every 180 days that even a waiver cannot eliminate (Sec. 47-512(f)).",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq1-s1",
+      "sq1-s2"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "90-day requirement waivable via approved Notice of Waiver; 180-day floor is not."
+  },
+  {
+    "id": "c3",
+    "claim": "Houston's pump-out trigger is 25% of the WETTED HEIGHT (measured bottom of device to invert of outlet pipe) containing floating materials, sediment, oils or greases — a depth measure, not 25% of volume (Sec. 47-512(c)).",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq1-s1"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "In Houston the 25% condition triggers cleaning MORE frequently than every 90 days; it is an accelerator above the 90-day baseline, not the baseline itself."
+  },
+  {
+    "id": "c4",
+    "claim": "Dallas requires grease interceptors cleaned not less than every 90 days, or whenever 25% or more of the interceptor contains floating materials, sediment, oils, or grease, per Dallas City Code Chapter 19, Sec. 19-126.2(c).",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq2-s8",
+      "sq2-s1"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Official Dallas Water Utilities FAQ cites the codified subsection verbatim. Dallas brochure loosely says '25% of design capacity'; the code-citing FAQ says '25% ... contains floating materials, sediment, oils, or grease' (FOG+solids basis, like Houston/SAWS)."
+  },
+  {
+    "id": "c5",
+    "claim": "San Antonio (SAWS) requires grease interceptor cleaning at a frequency not less often than every 90 days, and within 2 working days whenever 25% or more of the wetted height (bottom of device to invert of outlet pipe) contains floating materials, sediment, fats, oils, or grease — San Antonio City Code Sec. 34-527(b) (SAWS FOG Ordinance).",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq2-s3",
+      "sq2-s4"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Same 25% wetted-height / 90-day formula as Houston, plus an explicit 2-working-day response window."
+  },
+  {
+    "id": "c6",
+    "claim": "Austin requires grease traps pumped out at least once every 90 days, or sooner if grease and solids make up 50% OR MORE of the wetted height of the trap (Austin City Code Sec. 15-10-197). Austin's trigger is 50%, NOT 25%.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq2-s5"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Key per-jurisdiction deviation: Austin shares the 90-day interval but uses a 50% wetted-height trigger."
+  },
+  {
+    "id": "c7",
+    "claim": "The '90-day interval' is shared by all four Texas cities, but the percent-full trigger is NOT universal: Houston, Dallas, and San Antonio use 25%; Austin uses 50%. Therefore trigger percent must be configured per-jurisdiction.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq1-s1",
+      "sq2-s3",
+      "sq2-s5",
+      "sq2-s8"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Measurement basis is wetted height for Houston/SAWS/Austin; Dallas code-FAQ phrases it as '25% of the interceptor' (FOG+solids)."
+  },
+  {
+    "id": "c8",
+    "claim": "Hauling grease-trap and grit-trap waste in Texas is governed by Title 30 TAC Chapter 312 (Sludge Use, Disposal, and Transportation); transporter registration is 30 TAC §312.142 and the trip-ticket/manifest + recordkeeping rule is 30 TAC §312.145.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq3-s1",
+      "sq3-s2",
+      "sq3-s3"
+    ],
+    "contradicting_source_ids": [
+      "sq3-s4"
+    ],
+    "confidence": "high",
+    "notes": "Section numbers verified. TCEQ 2014 guidance RG-086 labels them 'Subchapter G' while Cornell LII files them under 'Subchapter F'; cite by section number, which is not in dispute."
+  },
+  {
+    "id": "c9",
+    "claim": "A TCEQ transporter registration is mandatory before hauling grease/grit trap waste; the executive director annotates the registration authorization with an assigned registration number, and a current copy must be kept at the place of business and in EACH vehicle operated under that registration (30 TAC §312.142(a),(c)).",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq3-s1",
+      "sq3-s3",
+      "sq3-s5"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "TCEQ RG-389 adds an operational dated-sticker-per-vehicle expectation. This TCEQ-assigned registration number is the value for trucks.registration_ref."
+  },
+  {
+    "id": "c10",
+    "claim": "30 TAC §312.145 requires a trip ticket for each collection/deposit capturing: transporter name/address/phone + commission registration number; generator name/signature/address/phone + date collected; type and amount of waste; signatures of responsible persons collecting/transporting/depositing; date and place deposited; receiving facility identification (permit/site-registration number, location, operator); receiving-facility representative signature acknowledging receipt and amount received; and the volume of the grease/grit trap or septic tank.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq3-s2",
+      "sq3-s3"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Three required signatures: generator, transporter/responsible persons, and receiving-facility on-site representative. Signatures may be electronic for generator and facility (per (a)(2) and (a)(7))."
+  },
+  {
+    "id": "c11",
+    "claim": "Under 30 TAC §312.145(b) trip tickets must be divided into five parts (generator at pickup; receiving facility; transporter retains one; one returned by transporter to the generator within 15 days after deposit; one to local authority if needed); copies must be retained for five years; transporters must file an annual summary by July 1 covering June 1–May 31.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq3-s2",
+      "sq3-s3"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Maps to custody_events workflow: copy distribution, returned_to_generator_at (<=15 days), 5-year retention, annual reporting job."
+  },
+  {
+    "id": "c12",
+    "claim": "Houston's most recent amendment to Sec. 47-512 is Ord. No. 2020-1024 (Dec. 2, 2020); Houston's FOG discharge limit was reduced from 400 mg/L to an average of 200 mg/L (Sec. 47-514), effective Dec. 2, 2023.",
+    "classification": "fact",
+    "supporting_source_ids": [
+      "sq1-s1",
+      "sq1-s2"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "high",
+    "notes": "Confirms the quoted 47-512 text is current, not superseded; 2023 Health Dept page noted further proposed changes (proposals only)."
+  },
+  {
+    "id": "c13",
+    "claim": "The exact $10 per-vehicle authorization-sticker fee cited for TCEQ transporter registration could not be independently verified against current verbatim 30 TAC §312.142 text; it came via a summarizer. The existence of a dated per-vehicle sticker requirement is corroborated by TCEQ RG-389.",
+    "classification": "unresolved",
+    "supporting_source_ids": [
+      "sq3-s3"
+    ],
+    "contradicting_source_ids": [],
+    "confidence": "low",
+    "notes": "Treat the exact fee figure as guidance-level until confirmed against current rule/fee schedule."
+  }
+]
