@@ -1,0 +1,699 @@
+),1$1&,$/67$7(0(176
+         8QDXGLWHG
+
+                       1
+                              Wanderlinger Brewing Company                                                                 TOTAL
+
+                                                              PROFIT AND LOSS                                         43,883.59
+                                                                                                                      13,355.00
+                                                                  January - December 2018
+                                                                                                                          101.40
+Income                                                                                                                  4,267.37
+  3000 Beer Sales - Taproom
+  3010 Beer Sales - Kegs                                                                                                    14.77
+  3020 Beer Sales - Growlers                                                                                              291.67
+  3500 Merchandise Sales                                                                                              34,000.00
+  3600 Shipping Income                                                                                                    376.49
+  3700 Miscellaneous Other                                                                                             -1,232.29
+  3800 Services
+  3900 Refunds-Allowances                                                                                                     0.00
+  3902 Sales Discounts                                                                                               $95,058.00
+  42100 Sales - Wholesale Beer
+                                                                                                                      13,594.95
+Total Income                                                                                                          14,650.74
+Cost of Goods Sold
+                                                                                                                        3,170.20
+  4000 COGS - Beer Kegged                                                                                              -1,664.94
+  4020 Production Labor                                                                                                 2,458.59
+  4200 Cost of Merchandise                                                                                           $32,209.54
+  4400 COGS - Rent
+  4600 COGS - Utilities                                                                                              $62,848.46
+Total Cost of Goods Sold
+GROSS PROFIT                                                                                                            4,958.11
+Expenses                                                                                                                3,932.99
+  5100 Supplies (non - Inventory)
+  6000 Taproom Payroll                                                                                                    657.55
+  6200 Office Expenses                                                                                                    867.07
+  6210 Cleaning Supplies                                                                                                1,510.33
+  6290 Other General and Admin Expenses
+  6300 Advertising                                                                                                            0.00
+  6305 Promotional/Giveaways                                                                                              256.05
+  6310 Dues & Subscriptions                                                                                             1,869.82
+  6325 Contract Services                                                                                                2,524.35
+  6328 Music & entertainers                                                                                             1,755.00
+  6400 Utilities                                                                                                        8,502.14
+  6410 Computer / Internet                                                                                                922.92
+  6500 Travel                                                                                                           2,151.49
+  6603 Bank Charges
+  6604 Credit Card Fees                                                                                                     21.49
+  6700 Legal & Professional Fees                                                                                        1,476.82
+  7020 Insurance
+   7022 Insurance - Liability                                                                                             974.50
+  Total 7020 Insurance                                                                                                    940.10
+  7030 Freight & Delivery                                                                                                 324.77
+  7500 Repair & Maintenance                                                                                             1,264.87
+                                                                                                                        1,721.81
+                                                          Accrual Basis Thursday, March 26, 2020 11:02 AM GMT-04:00     4,006.00
+
+                                                                                                                                1/2
+                              Wanderlinger Brewing Company                                           TOTAL
+                                                                                                      27.30
+                                                              PROFIT AND LOSS
+                                                                                                18,718.34
+                                                                  January - December 2018           949.00
+                                                                                                      74.40
+  7550 Tools                                                                                        588.67
+  8000 Sales Payroll
+  8220 Promotional                                                                               4,697.51
+  8245 Travel Meals                                                                                 345.02
+  8250 Meals and Entertainment
+  9200 Interest Expense                                                                          1,500.30
+  9300 Taxes & Licenses                                                                                0.00
+   9310 Beer Tax Expense
+   9320 F&E Tax Expense                                                                             894.61
+   9330 Payroll Tax Expense
+  Total 9300 Taxes & Licenses                                                                    2,739.93
+  Automobile Expense (deleted)                                                                         0.00
+  Equipment Rental (deleted)                                                                           0.00
+  Fuel (deleted)                                                                                       0.00
+  Job Materials (deleted)                                                                              0.00
+  Payroll Expenses                                                                                     0.00
+   Taxes                                                                                               0.00
+   Wages                                                                                               0.00
+  Total Payroll Expenses
+  Reimbursements                                                                                       0.00
+  Shipping and delivery expense (deleted)                                                              0.00
+  Subcontractors (deleted)                                                                             0.00
+  Supplies (deleted)                                                                                   0.00
+Total Expenses                                                                                         0.00
+NET OPERATING INCOME
+Other Expenses                                                                                $67,168.46
+  9400 Depreciation
+  9500 Amortization                                                                           $ -4,320.00
+  9900 Miscellaneous
+Total Other Expenses                                                                          172,598.85
+NET OTHER INCOME                                                                                 1,789.47
+NET INCOME
+                                                                                                21,402.87
+
+                                                                                            $195,791.19
+
+                                                                                           $ -195,791.19
+
+                                                                                           $ -200,111.19
+
+Accrual Basis Thursday, March 26, 2020 11:02 AM GMT-04:00                                  2/2
+                              Wanderlinger Brewing Company                                         TOTAL
+
+                                                               BALANCE SHEET                      300.00
+                                                                  As of December 31, 2018     12,297.59
+                                                                                            $12,597.59
+ASSETS
+  Current Assets                                                                                1,100.00
+   Bank Accounts                                                                              $1,100.00
+    1001 Cash on hand
+    1020 Business                                                                               4,075.65
+   Total Bank Accounts                                                                          3,246.42
+   Accounts Receivable                                                                          2,015.43
+    11200 Accounts Receivable
+   Total Accounts Receivable                                                                      513.00
+   Other Current Assets                                                                         2,845.67
+    1210 Inventory - Raw Materials                                                            80,526.13
+    1260 Keg Inventory                                                                      $93,222.30
+    1300 Inventory - Merchandise                                                           $106,919.89
+    1320 Inventory - Packaging
+    1400 Prepaid Expenses                                                                   383,032.93
+    1803 Pre-opening Costs                                                                      5,914.95
+   Total Other Current Assets
+  Total Current Assets                                                                     -172,598.85
+  Fixed Assets                                                                             $216,349.03
+   1550 Machinery & Equipment
+   1560 Furniture & Fixtures                                                                   -1,789.47
+   1600 Accumulated Depreciation                                                            $ -1,789.47
+  Total Fixed Assets                                                                       $321,479.45
+  Other Assets
+   1804 Accumulated Amortization
+  Total Other Assets
+
+TOTAL ASSETS
+
+Accrual Basis Thursday, March 26, 2020 10:59 AM GMT-04:00                                  1/3
+                              Wanderlinger Brewing Company                                                                   TOTAL
+
+                                                               BALANCE SHEET                                              5,996.26
+                                                                  As of December 31, 2018                               $5,996.26
+
+LIABILITIES AND EQUITY                                                                                                    1,233.31
+  Liabilities                                                                                                             3,352.75
+   Current Liabilities
+    Accounts Payable                                                                                                        102.38
+     2000 Accounts Payable                                                                                                  324.22
+    Total Accounts Payable                                                                                                5,012.66
+    Other Current Liabilities
+     2110 Payroll Liabilities                                                                                                   0.00
+      2115 Federal Taxes (941/944)                                                                                              0.00
+      2116 Federal Unemployment (940)                                                                                           0.00
+      2145 TN Quarterly Taxes                                                                                             3,288.86
+     Total 2110 Payroll Liabilities                                                                                     $8,301.52
+     2111 Direct Deposit Accrual                                                                                      $14,297.78
+     2112 Direct Deposit Payable
+     2117 F&E Tax Payable                                                                                                       0.00
+     2160 Sales/Use Tax Payable                                                                                           7,453.18
+    Total Other Current Liabilities                                                                                     63,157.48
+   Total Current Liabilities                                                                                            40,000.00
+   Long-Term Liabilities                                                                                              261,783.20
+    2200 SBA Escrow Account                                                                                          $372,393.86
+    2201 Note Payable - Mike Dial                                                                                    $386,691.64
+    2202 Note Payable - Chris Dial
+    2203 Note Payable - Gary/Patti Dial                                                                                   1,000.00
+    2300 SBA Loan - US Bank                                                                                             20,000.00
+   Total Long-Term Liabilities
+  Total Liabilities                                                                                                       7,000.00
+  Equity                                                                                                                  3,000.00
+   2810 Partner's Equity -                                                                                              20,000.00
+   2815 Partner's Equity -                                                                                                4,000.00
+   2820 Partner's Equity -                                                                                              15,000.00
+   2825 Partner's Equity -                                                                                                6,000.00
+   2830 Partner's Equity -                                                                                              10,000.00
+   2835 Partner's Equity -                                                                                                5,000.00
+   2840 Partner's Equity -                                                                                                6,000.00
+   2845 Partner's Equity -                                                                                                5,000.00
+   2850 Partner's Equity -                                                                                                5,000.00
+   2855 Partner's Equity -                                                                                                9,000.00
+   2860 Partner's Equity -
+   2865 Partner's Equity -                                                                                                        2/3
+   2870 Partner's Equity -
+   2875 Partner's Equity -
+
+                                                          Accrual Basis Thursday, March 26, 2020 10:59 AM GMT-04:00
+                              Wanderlinger Brewing Company                                         TOTAL
+                                                                                              10,000.00
+                                                               BALANCE SHEET
+                                                                  As of December 31, 2018       3,000.00
+                                                                                                3,000.00
+   2880 Partner's Equity -                                                                      3,000.00
+   2885 Partner's Equity -
+   2890 Partner's Equity -                                                                       -101.00
+   2895 Partner's Equity -                                                                            0.00
+   2900 Retained Earnings
+   2999 Opening Balance Equity                                                             -200,111.19
+   Net Income                                                                              $ -65,212.19
+  Total Equity
+TOTAL LIABILITIES AND EQUITY                                                               $321,479.45
+
+Accrual Basis Thursday, March 26, 2020 10:59 AM GMT-04:00                                  3/3
+                              Wanderlinger Brewing Company                                                                  TOTAL
+
+                                                      STATEMENT OF CASH FLOWS                                       -200,111.19
+                                                                  January - December 2018
+                                                                                                                       -1,100.00
+OPERATING ACTIVITIES                                                                                                   -4,075.65
+  Net Income                                                                                                           -3,246.42
+  Adjustments to reconcile Net Income to Net Cash provided by operations:                                              -2,015.43
+   11200 Accounts Receivable
+   1210 Inventory - Raw Materials                                                                                         -513.00
+   1260 Keg Inventory                                                                                                  -2,845.67
+   1300 Inventory - Merchandise                                                                                       -49,373.52
+   1320 Inventory - Packaging                                                                                        172,598.85
+   1400 Prepaid Expenses                                                                                                1,789.47
+   1803 Pre-opening Costs                                                                                               5,426.26
+   1600 Accumulated Depreciation                                                                                        1,233.31
+   1804 Accumulated Amortization
+   2000 Accounts Payable                                                                                                      0.00
+   2110 Payroll Liabilities                                                                                                   0.00
+   2111 Direct Deposit Accrual                                                                                          3,352.75
+   2112 Direct Deposit Payable                                                                                             102.38
+   2115 Payroll Liabilities:Federal Taxes (941/944)                                                                       -707.00
+   2116 Payroll Liabilities:Federal Unemployment (940)                                                                     324.22
+   2117 F&E Tax Payable                                                                                                 3,288.86
+   2145 Payroll Liabilities:TN Quarterly Taxes                                                                       124,239.41
+   2160 Sales/Use Tax Payable                                                                                      $ -75,871.78
+  Total Adjustments to reconcile Net Income to Net Cash provided by operations:
+                                                                                                                    -109,506.43
+Net cash provided by operating activities                                                                              -3,297.63
+INVESTING ACTIVITIES
+                                                                                                                  $ -112,804.06
+  1550 Machinery & Equipment
+  1560 Furniture & Fixtures                                                                                                   0.00
+Net cash provided by investing activities                                                                               3,140.18
+FINANCING ACTIVITIES                                                                                                   13,154.38
+  2200 SBA Escrow Account                                                                                              40,000.00
+  2201 Note Payable - Mike Dial                                                                                      101,612.15
+  2202 Note Payable - Chris Dial
+  2203 Note Payable - Gary/Patti Dial                                                                                        -1.00
+  2300 SBA Loan - US Bank                                                                                          $157,905.71
+  2900 Retained Earnings                                                                                           $ -30,770.13
+Net cash provided by financing activities
+NET CASH INCREASE FOR PERIOD                                                                                           43,367.72
+Cash at beginning of period                                                                                          $12,597.59
+CASH AT END OF PERIOD
+                                                                                                                                 1/1
+                                                                  Wednesday, January 13, 2021 07:13 PM GMT-05:00
+                              Wanderlinger Brewing Company                                                                   TOTAL
+
+                                                              PROFIT AND LOSS                                         255,105.93
+                                                                                                                        35,478.90
+                                                                  January - December 2019                               12,431.99
+                                                                                                                        29,579.51
+Income                                                                                                                    4,181.20
+  3000 Beer Sales - Taproom                                                                                                 942.07
+  3010 Beer Sales - Kegs                                                                                                  1,390.00
+  3500 Merchandise Sales                                                                                                 -9,140.76
+  3700 Miscellaneous Other                                                                                                    15.00
+  3710 Food Sales                                                                                                         2,099.35
+  3715 Beverage (non alc) Sales                                                                                           8,977.00
+  3800 Services                                                                                                         75,290.00
+  3902 Sales Discounts                                                                                                  86,366.35
+  3950 Uncategorized Income
+  42100 Sales - Wholesale Beer                                                                                       $416,350.19
+   43200 Packaged Beer
+   43250 Kegged Beer                                                                                                      1,920.11
+  Total 42100 Sales - Wholesale Beer                                                                                    37,991.19
+
+Total Income                                                                                                                739.30
+Cost of Goods Sold                                                                                                        1,980.90
+                                                                                                                        29,120.69
+  4010 COGS - Equipment Rental                                                                                            1,756.72
+  4020 Production Labor                                                                                                 12,835.15
+  4100 Freight & delivery - COS
+  4200 Cost of Merchandise                                                                                              18,984.61
+  4600 COGS - Utilities                                                                                                     742.50
+  4710 Food Costs
+  4900 COGS - Excise Taxes                                                                                                6,626.75
+  51109 Cost of Whlsl Beer                                                                                                4,181.10
+   51110 Beer - Kegged                                                                                                  12,578.41
+   51120 Beer - Packaged                                                                                                43,113.37
+   51130 Beer - Work In Progress Loss
+   51150 Inventory Adjustment                                                                                               303.25
+   51160 Taproom Transfer                                                                                                   175.00
+  Total 51109 Cost of Whlsl Beer                                                                                     $129,935.68
+  5150 Cost of Food/bev (non alc)
+  Cost of Goods Sold                                                                                                 $286,414.51
+Total Cost of Goods Sold
+GROSS PROFIT                                                                                                              9,100.00
+Expenses                                                                                                                  5,437.80
+  4021 Guaranteed Payment - Mike Dial                                                                                   17,539.76
+  5000 Production/RD Expenses                                                                                           38,427.37
+  5100 Supplies (non - Inventory)                                                                                         4,743.32
+  6000 Taproom Payroll                                                                                                    3,399.45
+  6200 Office Expenses
+  6210 Cleaning Supplies                                                                                                          1/3
+
+                                                          Accrual Basis Thursday, March 26, 2020 11:02 AM GMT-04:00
+                              Wanderlinger Brewing Company                                                                   TOTAL
+                                                                                                                        12,820.42
+                                                              PROFIT AND LOSS                                           11,090.00
+                                                                  January - December 2019
+                                                                                                                          3,113.92
+  6290 Other General and Admin Expenses                                                                                   3,429.65
+  6300 Advertising
+  6305 Promotional/Giveaways                                                                                                365.59
+  6310 Dues & Subscriptions                                                                                                 869.99
+  6315 Stationery & Printing                                                                                            12,672.42
+  6320 Licenses & Fees                                                                                                  59,582.98
+  6325 Contract Services                                                                                                  2,155.00
+  6328 Music & entertainers                                                                                                 228.22
+  6350 Donations                                                                                                          2,909.68
+  6400 Utilities                                                                                                          1,093.24
+  6410 Computer / Internet                                                                                                7,321.13
+  6415 Cable TV                                                                                                             695.41
+  6500 Travel                                                                                                             9,684.30
+  6603 Bank Charges                                                                                                       3,000.00
+  6604 Credit Card Fees                                                                                                 68,007.38
+  6700 Legal & Professional Fees                                                                                            270.00
+  7000 Rent or Lease                                                                                                      9,813.39
+  7020 Insurance                                                                                                        10,083.39
+   7022 Insurance - Liability
+  Total 7020 Insurance                                                                                                        54.53
+  7030 Freight & Delivery                                                                                                 8,945.49
+  7500 Repair & Maintenance                                                                                               6,993.84
+  8000 Sales Payroll                                                                                                    13,600.00
+  8001 Guaranteed Payments = Chris Dial                                                                                   4,650.85
+  8100 Commissions & fees
+  8220 Promotional                                                                                                            75.00
+  8245 Travel Meals                                                                                                         470.14
+  8250 Meals and Entertainment                                                                                              633.59
+  9200 Interest Expense                                                                                                 20,014.74
+  9300 Taxes & Licenses                                                                                                     300.00
+   9310 Beer Tax Expense                                                                                                   -497.18
+   9320 F&E Tax Expense                                                                                                     500.00
+  Total 9300 Taxes & Licenses                                                                                               302.82
+  Payroll Expenses
+   Taxes                                                                                                                        0.00
+   Wages                                                                                                                        0.00
+  Total Payroll Expenses                                                                                                        0.00
+  Reimbursements                                                                                                          1,215.78
+Total Expenses                                                                                                       $344,727.20
+NET OPERATING INCOME
+                                                                                                                     $ -58,312.69
+                                                          Accrual Basis Thursday, March 26, 2020 11:02 AM GMT-04:00
+                                                                                                                                  2/3
+                      Wanderlinger Brewing Company
+
+                                        PROFIT AND LOSS
+                                       January - December 2019
+
+Other Expenses                                                                           TOTAL
+  9900 Miscellaneous
+                                                                                      1,226.13
+Total Other Expenses                                                                $1,226.13
+NET OTHER INCOME                                                                  $ -1,226.13
+NET INCOME                                                                       $ -59,538.82
+
+                      Accrual Basis Thursday, March 26, 2020 11:02 AM GMT-04:00  3/3
+                              Wanderlinger Brewing Company                                                                   TOTAL
+
+                                                               BALANCE SHEET                                              1,695.20
+                                                                  As of December 31, 2019                               35,263.89
+                                                                                                                      $36,959.09
+ASSETS
+  Current Assets                                                                                                          5,884.50
+   Bank Accounts                                                                                                        $5,884.50
+    1001 Cash on hand
+    1020 Business                                                                                                          -372.75
+   Total Bank Accounts                                                                                                        -1.12
+   Accounts Receivable
+    11200 Accounts Receivable                                                                                           26,322.94
+   Total Accounts Receivable                                                                                           -13,304.25
+   Other Current Assets
+    11000 Brewery Inventory                                                                                               1,102.61
+     11600 Work In Process                                                                                                2,364.25
+     11605 Packaging                                                                                                    16,111.68
+     11610 Ingredients/Raw Materials
+     11615 Finished Goods - Kegs                                                                                            300.00
+     11620 Finished Goods - Packaged                                                                                            0.00
+     11630 Merchandise
+    Total 11000 Brewery Inventory                                                                                       15,783.45
+    1200 Inventory - Beer                                                                                                 9,791.28
+    1210 Inventory - Raw Materials                                                                                              0.00
+    1260 Keg Inventory                                                                                                          0.00
+    1300 Inventory - Merchandise
+    1320 Inventory - Packaging                                                                                          81,385.93
+    1400 Prepaid Expenses                                                                                                    -29.25
+    1803 Pre-opening Costs
+    1805 Uncategorized Asset                                                                                         $123,343.09
+   Total Other Current Assets                                                                                        $166,186.68
+  Total Current Assets
+  Fixed Assets                                                                                                        383,032.93
+   1550 Machinery & Equipment                                                                                           37,249.85
+   1560 Furniture & Fixtures
+   1600 Accumulated Depreciation                                                                                     -172,598.85
+  Total Fixed Assets                                                                                                 $247,683.93
+  Other Assets
+   1804 Accumulated Amortization                                                                                         -1,789.47
+  Total Other Assets                                                                                                  $ -1,789.47
+                                                                                                                     $412,081.14
+TOTAL ASSETS
+                                                                                                                                  1/3
+                                                          Accrual Basis Thursday, March 26, 2020 11:00 AM GMT-04:00
+                              Wanderlinger Brewing Company                                                                   TOTAL
+
+                                                               BALANCE SHEET                                            20,846.30
+                                                                  As of December 31, 2019                             $20,846.30
+
+LIABILITIES AND EQUITY                                                                                                       -35.00
+  Liabilities                                                                                                             $ -35.00
+   Current Liabilities
+    Accounts Payable                                                                                                      5,518.59
+     2000 Accounts Payable                                                                                                1,898.89
+    Total Accounts Payable
+    Credit Cards                                                                                                            339.21
+     2302 US Bank Credit Card                                                                                               423.71
+    Total Credit Cards                                                                                                    8,180.40
+    Other Current Liabilities
+     2110 Payroll Liabilities                                                                                                   0.00
+      2115 Federal Taxes (941/944)                                                                                              0.00
+      2116 Federal Unemployment (940)                                                                                     6,050.00
+      2145 TN Quarterly Taxes                                                                                            -3,615.78
+     Total 2110 Payroll Liabilities                                                                                       1,867.34
+     2111 Direct Deposit Accrual                                                                                          1,195.69
+     2112 Direct Deposit Payable                                                                                        22,549.79
+     21155 Keg Deps. Wholesale                                                                                        $36,227.44
+     2117 F&E Tax Payable                                                                                             $57,038.74
+     2160 Sales/Use Tax Payable
+     2301 US Bank Equipment Note                                                                                                0.00
+     2303 US Bank 2019 Note                                                                                               9,194.64
+    Total Other Current Liabilities                                                                                     88,523.22
+   Total Current Liabilities                                                                                          102,845.73
+   Long-Term Liabilities                                                                                              244,229.82
+    2200 SBA Escrow Account                                                                                          $444,793.41
+    2201 Note Payable - Mike Dial                                                                                    $501,832.15
+    2202 Note Payable - Chris Dial
+    2203 Note Payable - Gary/Patti Dial                                                                                 10,000.00
+    2300 SBA Loan - US Bank                                                                                               5,000.00
+   Total Long-Term Liabilities
+  Total Liabilities                                                                                                     20,000.00
+  Equity                                                                                                                14,000.00
+   2801 Partner Equity -
+   2810 Partner's Equity -                                                                                                3,000.00
+   2815 Partner's Equity -                                                                                              20,000.00
+   2820 Partner's Equity -
+   2825 Partner's Equity -                                                                                                4,000.00
+   2830 Partner's Equity -
+   2835 Partner's Equity -                                                                                                        2/3
+
+                                                          Accrual Basis Thursday, March 26, 2020 11:00 AM GMT-04:00
+                              Wanderlinger Brewing Company                                         TOTAL
+                                                                                              15,000.00
+                                                               BALANCE SHEET
+                                                                  As of December 31, 2019       6,000.00
+                                                                                              10,000.00
+   2840 Partner's Equity -                                                                    12,000.00
+   2845 Partner's Equity -
+   2850 Partner's Equity -                                                                      6,000.00
+   2855 Partner's Equity -                                                                    12,000.00
+   2860 Partner's Equity -
+   2865 Partner's Equity -                                                                      5,000.00
+   2870 Partner's Equity -                                                                      9,000.00
+   2875 Partner's Equity -                                                                    10,000.00
+   2880 Partner's Equity -                                                                      3,000.00
+   2885 Partner's Equity -                                                                      3,000.00
+   2890 Partner's Equity -                                                                      3,000.00
+   2895 Partner's Equity -                                                                 -200,212.19
+   2900 Retained Earnings
+   2999 Opening Balance Equity                                                                        0.00
+   Net Income                                                                                -59,538.82
+  Total Equity                                                                             $ -89,751.01
+TOTAL LIABILITIES AND EQUITY
+                                                                                           $412,081.14
+
+Accrual Basis Thursday, March 26, 2020 11:00 AM GMT-04:00                                  3/3
+                              Wanderlinger Brewing Company                                                                TOTAL
+
+                                                      STATEMENT OF CASH FLOWS                                       -59,538.82
+                                                                  January - December 2019
+                                                                                                                      -4,784.50
+OPERATING ACTIVITIES                                                                                                     372.75
+  Net Income                                                                                                                 1.12
+  Adjustments to reconcile Net Income to Net Cash provided by operations:
+   11200 Accounts Receivable                                                                                        -26,322.94
+   11600 Brewery Inventory:Work In Process                                                                           13,304.25
+   11605 Brewery Inventory:Packaging                                                                                  -1,102.61
+   11610 Brewery Inventory:Ingredients/Raw Materials                                                                  -2,364.25
+   11615 Brewery Inventory:Finished Goods - Kegs
+   11620 Brewery Inventory:Finished Goods - Packaged                                                                    -300.00
+   11630 Brewery Inventory:Merchandise                                                                                 4,075.65
+   1200 Inventory - Beer                                                                                            -12,537.03
+   1210 Inventory - Raw Materials                                                                                     -7,775.85
+   1260 Keg Inventory
+   1300 Inventory - Merchandise                                                                                          513.00
+   1320 Inventory - Packaging                                                                                          2,845.67
+   1400 Prepaid Expenses
+   1803 Pre-opening Costs                                                                                               -859.80
+   1805 Uncategorized Asset                                                                                                29.25
+   2000 Accounts Payable
+   2302 US Bank Credit Card                                                                                          14,850.04
+   2110 Payroll Liabilities                                                                                               -35.00
+   2112 Direct Deposit Payable
+   2115 Payroll Liabilities:Federal Taxes (941/944)                                                                    4,285.28
+   21155 Keg Deps. Wholesale                                                                                                 0.00
+   2116 Payroll Liabilities:Federal Unemployment (940)
+   2117 F&E Tax Payable                                                                                               -1,453.86
+   2145 Payroll Liabilities:TN Quarterly Taxes                                                                         6,050.00
+   2160 Sales/Use Tax Payable
+   2301 US Bank Equipment Note                                                                                           236.83
+   2303 US Bank 2019 Note                                                                                             -3,615.78
+   2305 US Bank Note 2
+  Total Adjustments to reconcile Net Income to Net Cash provided by operations:                                            99.49
+                                                                                                                      -1,421.52
+Net cash provided by operating activities                                                                              1,295.69
+INVESTING ACTIVITIES                                                                                                 22,549.79
+
+  1560 Furniture & Fixtures                                                                                             -100.00
+Net cash provided by investing activities                                                                              7,835.67
+FINANCING ACTIVITIES                                                                                              $ -51,703.15
+
+  2201 Note Payable - Mike Dial                                                                                     -31,334.90
+  2202 Note Payable - Chris Dial                                                                                  $ -31,334.90
+  2203 Note Payable - Gary/Patti Dial
+  2300 SBA Loan - US Bank                                                                                              1,741.46
+  2801 Partner Equity -                                                                                              25,365.74
+  2810 Partner's Equity -                                                                                            62,845.73
+                                                                                                                    -17,553.38
+                                                                  Wednesday, January 13, 2021 07:14 PM GMT-05:00     10,000.00
+
+                                                                                                                       4,000.00
+
+                                                                                                                               1/2
+                              Wanderlinger Brewing Company                                         TOTAL
+                                                                                                7,000.00
+                                                      STATEMENT OF CASH FLOWS                   7,000.00
+                                                                  January - December 2019       7,000.00
+                                                                                           $107,399.55
+  2820 Partner's Equity -
+  2855 Partner's Equity -                                                                   $24,361.50
+  2865 Partner's Equity -                                                                     12,597.59
+Net cash provided by financing activities
+NET CASH INCREASE FOR PERIOD                                                                $36,959.09
+Cash at beginning of period
+CASH AT END OF PERIOD
+
+Wednesday, January 13, 2021 07:14 PM GMT-05:00                                             2/2
+                              Wanderlinger Brewing Company                                                                    TOTAL
+
+                                                               BALANCE SHEET                                                 629.75
+                                                                  As of December 31, 2020                                29,209.32
+                                                                                                                       $29,839.07
+ASSETS
+  Current Assets                                                                                                         13,316.83
+   Bank Accounts                                                                                                       $13,316.83
+    1001 Cash on hand
+    1020 Business                                                                                                            155.14
+   Total Bank Accounts                                                                                                   13,046.45
+   Accounts Receivable
+    11200 Accounts Receivable                                                                                                 -41.35
+   Total Accounts Receivable                                                                                             47,933.60
+   Other Current Assets                                                                                                 -14,413.34
+    11000 Brewery Inventory
+     11600 Work In Process                                                                                                 1,574.47
+     11605 Packaging                                                                                                       5,516.02
+     11610 Ingredients/Raw Materials                                                                                     53,770.99
+     11615 Finished Goods - Kegs
+     11620 Finished Goods - Packaged                                                                                         475.00
+     11630 Merchandise                                                                                                         70.80
+    Total 11000 Brewery Inventory
+    1200 Inventory - Beer                                                                                                    100.00
+    1210 Inventory - Raw Materials                                                                                       32,063.48
+    1250 Inventory Beer - Kegged
+    1260 Keg Inventory                                                                                                           0.00
+    1300 Inventory - Merchandise                                                                                                 0.00
+    1320 Inventory - Packaging                                                                                                   0.00
+    1400 Prepaid Expenses                                                                                                81,385.93
+    1803 Pre-opening Costs                                                                                                    -29.25
+    1805 Uncategorized Asset                                                                                          $167,836.95
+   Total Other Current Assets                                                                                         $210,992.85
+  Total Current Assets
+  Fixed Assets                                                                                                         464,476.33
+   1550 Machinery & Equipment                                                                                            89,900.39
+   1560 Furniture & Fixtures
+   1600 Accumulated Depreciation                                                                                      -172,598.85
+  Total Fixed Assets                                                                                                  $381,777.87
+  Other Assets
+   1804 Accumulated Amortization                                                                                          -1,789.47
+  Total Other Assets                                                                                                   $ -1,789.47
+                                                                                                                      $590,981.25
+TOTAL ASSETS
+                                                                                                                                   1/3
+                                                        Accrual Basis Wednesday, January 13, 2021 07:02 PM GMT-05:00
+                              Wanderlinger Brewing Company                                         TOTAL
+
+                                                               BALANCE SHEET                  28,898.66
+                                                                  As of December 31, 2020   $28,898.66
+
+LIABILITIES AND EQUITY                                                                           -270.21
+  Liabilities                                                                                  $ -270.21
+   Current Liabilities
+    Accounts Payable                                                                            6,539.10
+     2000 Accounts Payable                                                                      1,562.77
+    Total Accounts Payable
+    Credit Cards                                                                                  238.90
+     2302 US Bank Credit Card                                                                       75.07
+    Total Credit Cards
+    Other Current Liabilities                                                                     159.06
+     2110 Payroll Liabilities                                                                   8,574.90
+      2115 Federal Taxes (941/944)
+      2116 Federal Unemployment (940)                                                                 0.00
+      2145 TN Quarterly Taxes                                                                         0.00
+      Aflac                                                                                     9,502.30
+     Total 2110 Payroll Liabilities                                                              -143.00
+     2111 Direct Deposit Accrual                                                                      0.00
+     2112 Direct Deposit Payable                                                                   -21.02
+     21155 Keg Deps. Wholesale                                                                11,990.14
+     21156 Non-Inventory Payable                                                              18,537.64
+     2117 F&E Tax Payable                                                                     17,705.74
+     2160 Sales/Use Tax Payable                                                                       0.00
+     2301 US Bank Equipment Note                                                              29,680.03
+     2303 US Bank 2019 Note                                                                   12,505.54
+     2304 US Bank 2020                                                                        24,536.99
+     2305 US Bank Note 2                                                                      15,623.17
+     2307 2020 Tank Loan                                                                   $148,492.43
+     2309 US Bank Van Loan                                                                 $177,120.88
+     2311 15BBL 2020 Tank Install
+     2312 March 2020 Loan
+    Total Other Current Liabilities
+   Total Current Liabilities
+
+Accrual Basis Wednesday, January 13, 2021 07:02 PM GMT-05:00                               2/3
+                              Wanderlinger Brewing Company                                                                      TOTAL
+
+                                                               BALANCE SHEET                                                      0.00
+                                                                  As of December 31, 2020                                  50,000.00
+                                                                                                                           50,189.14
+   Long-Term Liabilities                                                                                                 122,845.73
+    2200 SBA Escrow Account                                                                                              179,201.05
+    2201 Note Payable - Mike Dial
+    2202 Note Payable - Chris Dial                                                                                          5,029.02
+    2203 Note Payable - Gary/Patti Dial                                                                                  143,500.00
+    2300 SBA Loan - US Bank
+    2306 PPP Loan                                                                                                          17,628.67
+    2308 SBA Loan 2020                                                                                                 $568,393.61
+    2310 Mainvest                                                                                                      $745,514.49
+   Total Long-Term Liabilities
+  Total Liabilities                                                                                                        10,000.00
+  Equity                                                                                                                   23,000.00
+   2801 Partner Equity -                                                                                                   10,000.00
+   2802                                                                                                                    10,000.00
+   2803
+   2805 Joseph P. Drabik                                                                                                    5,000.00
+   2810 Partner's Equity -                                                                                                  5,000.00
+   2815 Partner's Equity -                                                                                                 14,000.00
+   2820 Partner's Equity -                                                                                                  3,000.00
+   2825 Partner's Equity -                                                                                                 25,000.00
+   2830 Partner's Equity -                                                                                                  4,000.00
+   2835 Partner's Equity -                                                                                                 15,000.00
+   2840 Partner's Equity -                                                                                                  6,000.00
+   2845 Partner's Equity -                                                                                                 10,000.00
+   2850 Partner's Equity -                                                                                                 12,000.00
+   2855 Partner's Equity -                                                                                                  6,000.00
+   2860 Partner's Equity -                                                                                                 15,000.00
+   2865 Partner's Equity -                                                                                                  8,500.00
+   2870 Partner's Equity -                                                                                                  9,000.00
+   2875 Partner's Equity -                                                                                                 10,000.00
+   2880 Partner's Equity -                                                                                                  3,000.00
+   2885 Partner's Equity -                                                                                                  3,000.00
+   2890 Partner's Equity -                                                                                                  3,000.00
+   2895 Partner's Equity -                                                                                              -259,751.01
+   2900 Retained Earnings
+   2999 Opening Balance Equity                                                                                                    0.00
+   Net Income                                                                                                           -104,282.23
+  Total Equity                                                                                                        $ -154,533.24
+TOTAL LIABILITIES AND EQUITY                                                                                           $590,981.25
+
+                                                        Accrual Basis Wednesday, January 13, 2021 07:02 PM GMT-05:00                 3/3
+I, Christopher L Dial, certify that:
+
+   1. The nancial statements of Wanderlinger Brewing Company included in this Form are true and
+      complete in all material respects; and
+
+  2. The tax return information of Wanderlinger Brewing Company included in this Form re ects
+      accurately the information reported on the tax return for Wanderlinger Brewing Company for
+      the fiscal years ended 2018 and 2019 (most recently available as of the Date of this Form C).
+
+Signature
+
+Name:      Christopher L Dial
+
+Title:     Owner
+
+                               1
+
